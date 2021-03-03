@@ -7,6 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Iterator; 
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -81,29 +84,24 @@ public class SearchServlet extends HttpServlet {
 	protected void Search(String Product){
 		Connection con;
 		try {
-			Class.forName("com.mysql.cj.jdbc.Driver");
-			String url="jdbc:mysql://localhost/EcomProject";
-			String user = "JEE";
-			String pwd ="0000";
-			con = DriverManager.getConnection(url,user,pwd);
-			Statement S = con.createStatement();
-			String query = "select * from produit where product_name like '%"+Product+"%';";
-			ResultSet rs = S.executeQuery(query);
-			if(!rs.next()) {
+			List<Product> rs = HibernateUtils.ProductsSearch(Product);
+			Iterator<Product> itr = null;
+			itr = rs.listIterator();
+			if(!itr.hasNext()) {
 				htmlproducts = htmlproducts + "<h3>n'ya pas plus de produits</h3>";
 			}
 			else {
-			while(rs.next())
+			while(itr.hasNext())
 	        {
-				Product produit = new Product();
-	            produit.setProduct_Id(rs.getString(1));
+				/*Product produit = new Product();
+	            produit.setProduct_Id(itr.getProduct_id());
 	            produit.setProduct_Name(rs.getString(2));
 	            produit.setProduct_Image(rs.getString(3));
 	            produit.setProduct_Description(rs.getString(4));
 	            produit.setProduct_Price(rs.getInt(5));
-	            Produits.add(produit);
+	            Produits.add(produit);*/
 	           
-	            	 
+	            	 Product produit = new Product();
 	            htmlproducts = htmlproducts+"<li class=\"glide__slide\">\r\n"
 	            		+ "                  <div class=\"product\">\r\n"
 	            		+ "                    <div class=\"product__header\">\r\n"
@@ -164,12 +162,6 @@ public class SearchServlet extends HttpServlet {
 
 	        	}
 			}
-		}
-		catch(ClassNotFoundException e){
-			e.printStackTrace();
-		}
-		catch(SQLException f){
-			f.printStackTrace();
 		}
 		finally {}
 	}
