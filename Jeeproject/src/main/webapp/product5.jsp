@@ -387,7 +387,6 @@
           </div>
           <div class="tab-inner" data-spm-anchor-id="a2g0o.detail.0.i10.473c5fdbTooAad"><span class="tab-inner-text" 
           data-spm-anchor-id="a2g0o.detail.0.i9.473c5fdbTooAad">DETAILS</span></div>
-          <span class="tab-inner-text" data-spm-anchor-id="a2g0o.detail.0.i9.473c5fdbTooAad">DETAILS</span>
           </div>
           
           
