@@ -21,7 +21,7 @@
   <!-- Custom StyleSheet -->
   <link rel="stylesheet" href="styles.css" />
 
-  <title>Shoes Shop</title>
+  <title>Phone Shop</title>
 </head>
 
 <body>
@@ -141,7 +141,7 @@
               <div class="zoom" id="zoom"></div>
             </div>
 
-             <div class="product-details__btn">
+            <div class="product-details__btn">
               <a class="add" href="#">
                 <span>
                   <svg>
@@ -158,13 +158,11 @@
                 BUY NOW
               </a>
             </div>
-          </div>
-
-           <div class="product-detail__right">
+            <div class="product-detail__right">
             <div class="product-detail__content">
-              <h3>Adidas</h3>
+              <h3>Ozweego white</h3>
               <div class="price">
-                <span class="new__price">$110.99</span>
+                <span class="new__price">$120.99</span>
               </div>
               <div class="product__review">
                 <div class="rating">
@@ -187,7 +185,7 @@
                 <a href="#" class="rating__quatity">5 reviews</a>
               </div>
               <p>
-                adidas has always been a pretty popular brand with me! I love their
+                Adidas has always been a pretty popular brand with me! I love their
                  shoes! They are high quality made, stylish, and last forever!! 
                  Their shoes are also great! I love adidas
               </p>
@@ -245,12 +243,16 @@
                       <select name="colors" id="colors" class="select-box">
                         <option value="USA">USA</option>
                         <option value="China">China</option>
-                        <option value="China">Italy</option>
                       </select>
                     </div>
                   </li>
                   <li>
-                   
+                    <span class="buy-now-wrap" aria-haspopup="true" aria-expanded="false">
+                    <button title="" type="button" class="next-btn next-large next-btn-primary buynow" 
+                    role="button" data-spm-anchor-id="a2g0o.detail.1000016.i6.7aa477f6A6ojo9">Acheter maintenant</button>
+                    </span>
+                    <span class="addcart-wrap" aria-haspopup="true" aria-expanded="false"><button title="" type="button" 
+                    class="next-btn next-large next-btn-primary addcart" role="button">Ajouter au panier</button></span>
                   </li>
                   
                   </a>
@@ -288,14 +290,14 @@
           <div class="detail__content">
             <div class="content active" id="description">
 		      <ol>
-                <p>We can accept drop shipping.</p>
-                <p>If the customer is US or CA, I suggest choosing UPS. (5 ~ 8 days delivery).</p>
-                <p>We will send out every order ASAP.</p>
-                <p>We will never put invoices, QR codes, promotions or brand logo or anything on 
-                aliexpress in drop shipping shipment.</p>
-                <p>I will pay attention to every drop shipping order.</p>
-                <p>We will make sure there is enough inventory.</p>
-                <p>We can provide customized services.</p>
+                <li>We can accept drop shipping.</li>
+                <li>If the customer is US or CA, I suggest choosing UPS. (5 ~ 8 days delivery).</li>
+                <li>We will send out every order ASAP.</li>
+                <li>We will never put invoices, QR codes, promotions or brand logo or anything on 
+                aliexpress in drop shipping shipment.</li>
+                <li>I will pay attention to every drop shipping order.</li>
+                <li>We will make sure there is enough inventory.</li>
+                <li>We can provide customized services.</li>
               </ol>
              	<img src="https://ae01.alicdn.com/kf/Hb3da34b7a28e4277aab3e02bd9ba01c8G.jpg" 
              	class="detail-desc-decorate-image" style="margin-bottom: 10px;
@@ -393,7 +395,7 @@
           <li class="product-prop line-limit-length" data-spm-anchor-id="a2g0o.detail.0.i12.473c5fdbTooAad">
           <span class="property-title" data-spm-anchor-id="a2g0o.detail.0.i13.473c5fdbTooAad">Brand name:&nbsp;</span>
           <span class="property-desc line-limit-length" title="hecrafted" 
-          data-spm-anchor-id="a2g0o.detail.0.i16.473c5fdbTooAad">adidas</span>
+          data-spm-anchor-id="a2g0o.detail.0.i16.473c5fdbTooAad">Adidas</span>
           </li><li class="product-prop line-limit-length"><span class="property-title">type of shoes:&nbsp;</span>
           <span class="property-desc line-limit-length" title="De base">Espadrilles</span></li>
           <li class="product-prop line-limit-length"><span class="property-title">Original:&nbsp;</span>
@@ -474,7 +476,7 @@
                       alt="product"></a>
                     </div>
                     <div class="product__footer">
-                      <h3>Jordan</h3>
+                      <h3>Ozweego Shoes</h3>
                       <div class="rating">
                         <svg>
                           <use xlink:href="./images/sprite.svg#icon-star-full"></use>
@@ -851,7 +853,7 @@
                 <li class="glide__slide">
                   <div class="product">
                     <div class="product__header">
-                      <a href="#"><img src="./images/nik2.jpg" alt="product"></a>
+                      <a href="#"><img src="images/products/headphone/headphone1.jpeg" alt="product"></a>
                     </div>
                     <div class="product__footer">
                       <h3>Sony WH-CH510</h3>
@@ -1621,9 +1623,10 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <!-- Custom JavaScript -->
-  <script src="./js/jr.js"></script>
+  <script src="./js/adidas.js"></script>
   <script src="./js/index.js"></script>
   <script src="./js/slider.js"></script>
 </body>
 
+          
         </html>

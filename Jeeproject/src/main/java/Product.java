@@ -1,12 +1,32 @@
 import java.io.Serializable;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "produit")
+
 public class Product implements Serializable {
 	private static final long serialVersionUID = 1L;
 	
+	@Id
+	@Column(name = "product_id")
 	private String Product_Id;
+	
+	@Column(name = "product_name")
 	private String Product_Name;
+	
+	@Column(name = "product_image")
 	private String Product_Image;
+	
+	@Column(name = "product_description")
 	private String Product_Description;
+	
+	@Column(name = "price")
 	private int Product_Price;
 	public Product(String product_Id, String product_Name, String product_Image, String product_Description,
 			int product_Price) {
@@ -18,8 +38,7 @@ public class Product implements Serializable {
 		Product_Price = product_Price;
 	}
 	public Product() {
-		super();
-		// TODO Auto-generated constructor stub
+		super();		// TODO Auto-generated constructor stub
 	}
 	public String getProduct_Id() {
 		return Product_Id;

@@ -161,7 +161,7 @@
           </div>
   <div class="product-detail__right">
             <div class="product-detail__content">
-              <h3>puma</h3>
+              <h3>Ozweego white</h3>
               <div class="price">
                 <span class="new__price">$120.99</span>
               </div>
