@@ -7,9 +7,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.ArrayList;
-import java.util.Iterator; 
+import java.util.NoSuchElementException;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -49,7 +49,7 @@ public class SearchServlet extends HttpServlet {
 		
 		String ProductSearch = request.getParameter("productsearch");
 		
-		Search(ProductSearch);
+		Search("sbat");
 		htmlproducts = htmlproducts+"<div class=\"glide__arrows\" data-glide-el=\"controls\">\r\n"
 				+ "          <button class=\"glide__arrow glide__arrow--left\" data-glide-dir=\"<\">\r\n"
 				+ "            <svg>\r\n"
@@ -66,7 +66,7 @@ public class SearchServlet extends HttpServlet {
 				+ "    </div>\r\n"
 				+ "  </section>\r\n";
 		
-		request.setAttribute("htmlproducts", htmlproducts);
+		getServletContext().setAttribute("htmlproducts", htmlproducts);
 		getServletContext().getRequestDispatcher(url).forward(request, response);
 		htmlproducts = "<section class=\"section latest__products\" id=\"latest\">\r\n"
 				+ "        <div class=\"title__container\">\r\n"
@@ -81,27 +81,30 @@ public class SearchServlet extends HttpServlet {
 				+ "              <ul class=\"glide__slides latest-center\">\r\n";
 	}
 
+	public void print(String ss) {
+		System.out.println(ss);
+	}
 	protected void Search(String Product){
-		Connection con;
 		try {
 			List<Product> rs = HibernateUtils.ProductsSearch(Product);
 			Iterator<Product> itr = null;
-			itr = rs.listIterator();
+			try {
+			itr = rs.iterator();
 			if(!itr.hasNext()) {
 				htmlproducts = htmlproducts + "<h3>n'ya pas plus de produits</h3>";
 			}
 			else {
 			while(itr.hasNext())
 	        {
-				/*Product produit = new Product();
-	            produit.setProduct_Id(itr.getProduct_id());
-	            produit.setProduct_Name(rs.getString(2));
-	            produit.setProduct_Image(rs.getString(3));
-	            produit.setProduct_Description(rs.getString(4));
-	            produit.setProduct_Price(rs.getInt(5));
-	            Produits.add(produit);*/
-	           
-	            	 Product produit = new Product();
+				Product produit = new Product();
+	            produit.setProduct_Id(itr.next().getProduct_Id());
+	            produit.setProduct_Name( itr.next().getProduct_Name());
+	            produit.setProduct_Image(itr.next().getProduct_Image());
+	            produit.setProduct_Description(itr.next().getProduct_Description());
+	            produit.setProduct_Price(itr.next().getProduct_Price());
+	            Produits.add(produit);
+	            print(produit.getProduct_Description());
+	            	 
 	            htmlproducts = htmlproducts+"<li class=\"glide__slide\">\r\n"
 	            		+ "                  <div class=\"product\">\r\n"
 	            		+ "                    <div class=\"product__header\">\r\n"
@@ -163,6 +166,7 @@ public class SearchServlet extends HttpServlet {
 	        	}
 			}
 		}
-		finally {}
+			catch(NoSuchElementException e) {  }
 	}
-}
+		finally {}
+} }

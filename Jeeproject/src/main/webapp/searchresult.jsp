@@ -97,6 +97,7 @@
 
   <!-- Main -->
   <main id="main">
+
   ${htmlproducts}
           <div class="glide__bullets" data-glide-el="controls[nav]">
             <button class="glide__bullet" data-glide-dir="=0"></button>

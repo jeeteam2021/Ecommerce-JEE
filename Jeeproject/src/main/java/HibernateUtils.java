@@ -17,7 +17,7 @@ public class HibernateUtils {
 	   
 	    List<Product> list = new ArrayList<Product>();
 		
-		String hql = "FROM produit R WHERE R.product_name =:id";
+		String hql = "FROM Product R WHERE R.Product_Name =:id";
 		@SuppressWarnings("unchecked")
 		Query<Product> createQuery = session.createQuery(hql);
 		createQuery.setParameter("id", productName);

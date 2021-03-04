@@ -10,8 +10,18 @@
   	<description></description>
   	<servlet-class>test</servlet-class>
   </servlet>
+  <servlet>
+  	<servlet-name>addtocarte</servlet-name>
+  	<display-name>addtocarte</display-name>
+  	<description></description>
+  	<servlet-class>addtocarte</servlet-class>
+  </servlet>
   <servlet-mapping>
   	<servlet-name>test</servlet-name>
   	<url-pattern>/test</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>addtocarte</servlet-name>
+  	<url-pattern>/addtocarte</url-pattern>
   </servlet-mapping>
 </web-app>

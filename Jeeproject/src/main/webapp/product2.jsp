@@ -148,7 +148,9 @@
                     <use xlink:href="./images/sprite.svg#icon-cart-plus"></use>
                   </svg>
                 </span>
-                ADD TO CART</a>
+                 <form action="addtocarte" method="Submit">
+                  <button name="action" class="hero__btn" name="produit">add to carte</button>
+                  </form></a>
               <a class="buy" href="#">
                 <span>
                   <svg>
@@ -222,7 +224,7 @@
                             <use xlink:href="./images/sprite.svg#icon-minus"></use>
                           </svg>
                         </span>
-                        <input type="text" min="1" value="1" max="10" class="counter-btn">
+                        <input name = "quantity" type="text" min="1" value="1" max="10" class="counter-btn">
                         <span class="plus-btn">
                           <svg>
                             <use xlink:href="./images/sprite.svg#icon-plus"></use>

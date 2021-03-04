@@ -8,12 +8,12 @@ public class cart {
     private int product_id;
 	private int product_quantity;
 	Date CREATE_Date;
-	public cart(int cart_id, int product_id, int product_quantity, Date cREATE_Date) {
+	public cart(int cart_id, int product_id, int product_quantity, Date CREATE_Date) {
 		super();
 		this.cart_id = cart_id;
 		this.product_id = product_id;
 		this.product_quantity = product_quantity;
-		CREATE_Date = cREATE_Date;
+		CREATE_Date = CREATE_Date;
 	}
 	public cart() {
 		super();

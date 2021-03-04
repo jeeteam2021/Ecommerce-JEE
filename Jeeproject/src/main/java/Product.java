@@ -67,8 +67,8 @@ public class Product implements Serializable {
 	public int getProduct_Price() {
 		return Product_Price;
 	}
-	public void setProduct_Price(int product_Price) {
-		Product_Price = product_Price;
+	public void setProduct_Price(int i) {
+		Product_Price = i;
 	}
 	public static long getSerialversionuid() {
 		return serialVersionUID;
