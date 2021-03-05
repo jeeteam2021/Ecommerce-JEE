@@ -43,7 +43,17 @@ protected void doPost(HttpServletRequest request, HttpServletResponse response) 
     String email = request.getParameter("email");
     String password = request.getParameter("password");
     
-    getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);  
+    if(TestUser(email, password))
+    {
+        RequestDispatcher rs = request.getRequestDispatcher("RegisterNew.jsp");
+        rs.forward(request, response);
+    }
+    else
+    {
+       out.println("Username or Password incorrect");
+       RequestDispatcher rs = request.getRequestDispatcher("page1.jsp");
+       rs.include(request, response);
+    }  
         }
         
 	
