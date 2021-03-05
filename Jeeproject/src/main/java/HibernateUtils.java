@@ -7,6 +7,14 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 
+/*********************************************************************
+ * 
+ *        la classe java qui contient les methodes necissitant dans le projet
+ *        afin de satisfaire les fonctions voulu
+ *        version de Hibernate 5.4.1 
+ *        
+ ************************************************************************/
+
 public class HibernateUtils {
 
 	static Session session = HibernateConf.getSession();

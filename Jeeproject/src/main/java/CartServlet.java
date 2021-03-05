@@ -14,7 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/**************************************************************************
+ *          
+ *          la servlet responsable d'afficher le contenu 
+ *          du panier de l'utilisateur
+ * 
+ ****************************************************************************/
 @WebServlet("/CartServlet")
 public class CartServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

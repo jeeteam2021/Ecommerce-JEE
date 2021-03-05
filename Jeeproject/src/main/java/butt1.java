@@ -8,6 +8,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+/*********************************************************************
+ * 
+ *        cette servlet gere les les pages des produit 
+ *        il te guide vers la page du produit en cliquant sur add to carte qui est situe 
+ *        à l'index
+ ************************************************************************/
+
 @WebServlet("/butt1")
 public class butt1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;

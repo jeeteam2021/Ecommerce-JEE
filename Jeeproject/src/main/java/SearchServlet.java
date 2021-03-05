@@ -18,6 +18,13 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
+/*********************************************************************
+ * 
+ *        la servlet qui gere la fonction recherche 
+ *        depuis la base de donnee des produit . 
+ *        
+ ************************************************************************/
+
 @WebServlet("/SearchServlet")
 public class SearchServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;

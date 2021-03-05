@@ -12,7 +12,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-
+/*********************************************************************
+ * 
+ *        cette servlet insere le produit dans le panier de l'utilasteur 
+ *        ou il insert la quantite et le nom et le produit
+ *        
+ ************************************************************************/
 
 @WebServlet("/product")
 public class addtocarte extends HttpServlet {

@@ -2,6 +2,12 @@ import java.io.Serializable;
 import java.sql.Date;  
 
 
+/*********************************************************************
+ * 
+ *        le modele DAO de la table Cart
+ ************************************************************************/
+
+
 public class cart {
 	private static final long serialVersionUID = 1L;
 	public int cart_id;

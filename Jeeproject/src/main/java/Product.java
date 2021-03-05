@@ -7,6 +7,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+
+/*********************************************************************
+ * 
+ *        le modele DAO de la table Product 
+ *        qui permet d'executer les requetes hql
+ *        
+ *        
+ ************************************************************************/
+
 @Entity
 @Table(name = "produit")
 
